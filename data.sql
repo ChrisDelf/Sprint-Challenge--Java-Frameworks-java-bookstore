@@ -1,8 +1,8 @@
-INSERT INTO section (sectionid, name) VALUES (1, 'Fiction');
-INSERT INTO section (sectionid, name) VALUES (2, 'Technology');
-INSERT INTO section (sectionid, name) VALUES (3, 'Travel');
-INSERT INTO section (sectionid, name) VALUES (4, 'Business');
-INSERT INTO section (sectionid, name) VALUES (5, 'Religion');
+-- INSERT INTO section (sectionid, name) VALUES (1, 'Fiction');
+-- INSERT INTO section (sectionid, name) VALUES (2, 'Technology');
+-- INSERT INTO section (sectionid, name) VALUES (3, 'Travel');
+-- INSERT INTO section (sectionid, name) VALUES (4, 'Business');
+-- INSERT INTO section (sectionid, name) VALUES (5, 'Religion');
 
 INSERT INTO author (authorid, fname, lname) VALUES (1, 'John', 'Mitchell');
 INSERT INTO author (authorid, fname, lname) VALUES (2, 'Dan', 'Brown');
