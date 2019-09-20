@@ -1,4 +1,8 @@
 package com.lambdaschool.starthere.repository;
 
-public interface AuthorRepository {
+import com.lambdaschool.starthere.models.Author;
+import org.springframework.data.repository.CrudRepository;
+
+public interface AuthorRepository extends CrudRepository<Author, Long>
+{
 }
