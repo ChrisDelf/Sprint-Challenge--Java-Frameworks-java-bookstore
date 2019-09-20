@@ -127,6 +127,20 @@ public class DataController {
         Book newBook = bookService.updateBookToAuthor(bookid, authorid);
         return new ResponseEntity<>(null, HttpStatus.CREATED);
     }
+// Delete  localhost:9000/data/books/1
 
+    @ApiOperation(value = "Delete a book")
+    @ApiResponses(value = {
+            @ApiResponse(code = 500, message = "Error Creating Book", response = ErrorDetail.class),
+            @ApiResponse(code=404,message="Book Not Found", response = ErrorDetail.class)
+    })
 
+    @DeleteMapping(value = "/books/{bookid}")
+    public ResponseEntity<?> deleteBookById(
+
+            @PathVariable long bookid)
+    {
+        bookService.delete(bookid);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }

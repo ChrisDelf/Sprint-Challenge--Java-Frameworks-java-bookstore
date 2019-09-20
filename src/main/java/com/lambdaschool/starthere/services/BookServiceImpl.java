@@ -84,11 +84,18 @@ public class BookServiceImpl implements BookService{
                 ->new ResourceNotFoundException(Long.toString(id)));
     }
 
+    @Transactional
     @Override
-    public void delete(long id) {
-
+    public void delete(long id) throws ResourceNotFoundException
+    {
+        if (bookRepo.findById(id).isPresent())
+        {
+            bookRepo.deleteById(id);
+        } else
+        {
+            throw new ResourceNotFoundException(Long.toString(id));
+        }
     }
-
 
     @Transactional
     @Override

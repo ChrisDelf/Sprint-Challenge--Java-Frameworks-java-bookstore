@@ -13,11 +13,14 @@ public class Book extends Auditable
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long bookid;
 
+    @Column
     private String title;
+
     private String ISBN;
     private int copy;
 
-    @ManyToMany(mappedBy = "books")
+    @ManyToMany(mappedBy = "books",
+    cascade = CascadeType.ALL)
     @JsonIgnoreProperties("books")
     private List<Author>authors;
 

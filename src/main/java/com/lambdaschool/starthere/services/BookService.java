@@ -18,6 +18,6 @@ public interface BookService {
 
     Book update(Book book, long id);
 
-    void delete(long id);
+    void delete(long bookid);
 
 }
