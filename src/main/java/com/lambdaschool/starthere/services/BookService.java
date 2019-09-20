@@ -12,7 +12,7 @@ public interface BookService {
 
     Book save(Book book);
 
-    Book findById(long id);
+    Book findBookById(long id);
 
     Book update(Book book, long id);
 
