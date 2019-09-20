@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "author")
+@Table(name = "authors")
 public class Author extends Auditable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
